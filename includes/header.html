@@ -1,0 +1,54 @@
+<header>
+    <nav id="main-nav">
+        <!-- 기존 내비게이션 내용 -->
+        <div class="container">
+            <div class="header-content">
+                <h1 id="header-title">loading...</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 목차 및 메뉴 토글 버튼 -->
+    <div class="menu-toggle" onclick="toggleToc()">
+        <span id="menu-icon">&#9776;</span> <!-- 삼선 아이콘 -->
+        <span id="close-icon" style="display: none;">&#10006;</span> <!-- X 아이콘, 초기에는 숨김 -->
+    </div>
+
+    
+
+    <!-- 목차 및 메뉴 창 -->
+    <nav id="toc" class="toc-container">
+        <div class="toc-content">
+            <h2>Table of Contents</h2>
+            <ul id="tocList">
+                <!-- 자동 생성된 목차 항목들이 여기 삽입됩니다 -->
+            </ul>
+
+            <h2>Menu</h2>
+            <ul id="menuList">
+                <li>
+                    <a href="#" class="submenu-toggle" data-subme-id="submenu01" onclick="toggleSubmenu('submenu01')">>성경 인물</a>
+                    <ul id="submenu01" class="submenu">
+                            <li data-depth="1"><a href="#" data-person="alex">알렉스</a></li>
+                            <li data-depth="1"><a href="#" data-person="noah">노아</a></li>
+                            <li data-depth="1"><a href="#" data-person="jonah">요나</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle" data-subme-id="submenu02" onclick="toggleSubmenu('submenu02')">>그외</a>
+                    <ul id="submenu02" class="submenu">
+                            <li data-depth="1"><a href="#" data-person="#">복습 퀴즈</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- index.html로 이동하는 아이콘 -->
+    <div class="header-icon">
+        <a href="index.html">
+            <img src="assets/images/dino.ico" alt="Home Icon" class="home-icon">
+        </a>
+    </div>
+
+</header>
